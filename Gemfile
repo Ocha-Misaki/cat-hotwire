@@ -6,6 +6,7 @@ gem 'rails', '~> 7.1.3'
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
 gem 'importmap-rails'
+gem 'kaminari'
 gem 'puma'
 gem 'redis'
 gem 'sprockets-rails'
