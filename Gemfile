@@ -5,6 +5,8 @@ gem 'rails', '~> 7.1.3'
 
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
+gem 'haml-rails'
+gem 'html2haml'
 gem 'importmap-rails'
 gem 'kaminari'
 gem 'puma'
