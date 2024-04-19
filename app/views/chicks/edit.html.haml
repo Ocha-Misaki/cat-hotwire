@@ -1,0 +1,7 @@
+%h1 Editing chick
+= render "form", chick: @chick
+%br/
+%div
+  = link_to "Show this chick", @chick
+  |
+  \#{link_to "Back to chicks", chicks_path}

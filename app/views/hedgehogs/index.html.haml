@@ -1,0 +1,8 @@
+%p{:style => "color: green"}= notice
+%h1 Hedgehogs
+#hedgehogs
+  - @hedgehogs.each do |hedgehog|
+    = render hedgehog
+    %p
+      = link_to "Show this hedgehog", hedgehog
+= link_to "New hedgehog", new_hedgehog_path

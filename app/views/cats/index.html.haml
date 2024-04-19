@@ -1,0 +1,18 @@
+%p{:style => "color: green"}= notice
+%h1 Cats
+= search_form_for @search do |f|
+  = f.label :name_cont, "名前"
+  = f.search_field :name_cont
+  = f.label :age_eq, "年齢"
+  = f.search_field :age_eq
+  = f.submit
+  = link_to "クリア", cats_path
+= sort_link(@search, :name)
+= sort_link(@search, :age)
+#cats
+  - @cats.each do |cat|
+    = render cat
+    %p
+      = link_to "Show this cat", cat
+= paginate @cats
+= link_to "New cat", new_cat_path
