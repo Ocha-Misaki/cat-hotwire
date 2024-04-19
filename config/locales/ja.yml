@@ -6,6 +6,11 @@ ja:
       cat:
         name: 名前
         age: 年齢
+    cats:
+      notice:
+        create: "作成しました"
+        update: "更新しました"
+        destroy: "削除しました"
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
