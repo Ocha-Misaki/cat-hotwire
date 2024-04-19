@@ -1,0 +1,8 @@
+%p{:style => "color: green"}= notice
+%h1 Chicks
+#chicks
+  - @chicks.each do |chick|
+    = render chick
+    %p
+      = link_to "Show this chick", chick
+= link_to "New chick", new_chick_path
