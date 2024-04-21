@@ -27,7 +27,7 @@ class CatsController < ApplicationController
     @cat = Cat.new(cat_params)
 
     if @cat.save
-      redirect_to @cat, notice: 'notice.create'
+      redirect_to @cat, notice: t('notice.create')
     else
       render :new, status: :unprocessable_entity
     end
@@ -36,7 +36,7 @@ class CatsController < ApplicationController
   # PATCH/PUT /cats/1
   def update
     if @cat.update(cat_params)
-      redirect_to @cat, notice: 'notice.update', status: :see_other
+      redirect_to @cat, notice: t('notice.update'), status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end
@@ -45,7 +45,7 @@ class CatsController < ApplicationController
   # DELETE /cats/1
   def destroy
     @cat.destroy!
-    redirect_to cats_url, notice: 'notice.destroy', status: :see_other
+    redirect_to cats_url, alert: t('alert.destroy'), status: :see_other
   end
 
   private
