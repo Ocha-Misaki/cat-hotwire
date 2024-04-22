@@ -1,9 +1,10 @@
-.row.py-2.border-top
-  .col-4.my-auto
-    = cat.name
-  .col-4.my-auto
-    = cat.age
-  .col-4
-    .d-flex.justify-content-end
-      = link_to "編集", edit_cat_path(cat), class: "btn btn-sm btn-outline-primary me-2"
-      = button_to "削除", cat, method: :delete, class: "btn btn-sm btn-outline-danger"
+= turbo_frame_tag cat do
+  .row.py-2.border-top
+    .col-4.my-auto
+      = cat.name
+    .col-4.my-auto
+      = cat.age
+    .col-4
+      .d-flex.justify-content-end
+        = link_to "編集", edit_cat_path(cat), class: "btn btn-sm btn-outline-primary me-2"
+        = button_to "削除", cat, method: :delete, class: "btn btn-sm btn-outline-danger"
