@@ -19,7 +19,7 @@
   .card-header
     = icon_with_text("table", "一覧")
   .card-body.mx-3
-    = turbo_frame_tag "cats-list" do
+    = turbo_frame_tag "cats-list", data: { turbo_action: :advance }do
       .row.py-2
         .col-4.mt-auto
           = sort_link(@search, :name)
