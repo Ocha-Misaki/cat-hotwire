@@ -31,6 +31,6 @@
             class: "btn btn-outline-primary",
             data: { turbo_frame: "modal" }
       %div#cats
-        = render @cats
-      .d-flex.justify-content-end.mt-3
-        = paginate @cats
+        = turbo_frame_tag "cats-page-#{@cats.current_page}" do
+          = render @cats
+          = turbo_frame_tag "cats-page-#{@cats.next_page}", loading: :lazy, src: path_to_next_page(@cats)
