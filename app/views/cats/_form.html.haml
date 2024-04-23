@@ -1,5 +1,5 @@
 = turbo_frame_tag cat do
-  = bootstrap_form_with(model: cat) do |form|
+  = bootstrap_form_with(model: cat, data: { action: "turbo:submit-end->modal#close" } ) do |form|
     .row.py-2.border-top
       .col-4
         = form.text_field :name,
