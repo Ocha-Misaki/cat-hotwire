@@ -16,5 +16,6 @@
           .ps-0.position-fixed{:style => "width: 200px;"}
             = render "sidebar"
           .col.my-4
-            = render "flash"
+            %div#flash
+              = render "flash"
             = yield
