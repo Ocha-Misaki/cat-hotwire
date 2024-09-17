@@ -4,6 +4,7 @@
     %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
     %title CatHotwire
     %meta{content: "width=device-width,initial-scale=1", name: "viewport"}
+    %meta{content: "no-cache", name: "turbo-cache-control"}
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
@@ -16,6 +17,6 @@
           .ps-0.position-fixed{:style => "width: 200px;"}
             = render "sidebar"
           .col.my-4
-            %div#flash
-              = render "flash"
             = yield
+        = turbo_frame_tag "modal"
+        %div.position-fixed.top-0.end-0#flashes{style: "margin: 0.75rem"}
